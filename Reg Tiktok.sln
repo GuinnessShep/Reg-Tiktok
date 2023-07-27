@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reg Tiktok", "Reg Tiktok\Reg Tiktok.csproj", "{DE9F4EFC-09B2-4836-9932-82E35926E97B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE9F4EFC-09B2-4836-9932-82E35926E97B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE9F4EFC-09B2-4836-9932-82E35926E97B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE9F4EFC-09B2-4836-9932-82E35926E97B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE9F4EFC-09B2-4836-9932-82E35926E97B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53354102-9015-4394-990F-6814C8EC5E54}
+	EndGlobalSection
+EndGlobal
