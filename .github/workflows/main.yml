@@ -31,8 +31,14 @@ jobs:
     - name: Restore .NET dependencies
       run: dotnet restore './Reg Tiktok.sln'
 
+    - name: Ensure x86 architecture
+      run: |
+        echo "Setting environment variables for x86 architecture"
+        set DOTNET_ROOT=C:\Program Files (x86)\dotnet
+        set PATH=%DOTNET_ROOT%;%PATH%
+
     - name: Build solution
-      run: dotnet build './Reg Tiktok.sln' --configuration Release --no-restore
+      run: dotnet build './Reg Tiktok.sln' --configuration Release --no-restore --runtime win-x86
 
     - name: Run tests
       run: dotnet test './Reg Tiktok.sln' --configuration Release --no-build
