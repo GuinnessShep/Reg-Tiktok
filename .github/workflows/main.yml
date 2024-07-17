@@ -1,0 +1,31 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '7.0.x' # Use the latest .NET version
+
+    - name: Restore dependencies
+      run: dotnet restore './Reg Tiktok.sln'
+
+    - name: Build solution
+      run: dotnet build './Reg Tiktok.sln' --configuration Release
+
+    - name: Run tests
+      run: dotnet test './Reg Tiktok.sln' --configuration Release
