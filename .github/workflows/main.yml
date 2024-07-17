@@ -18,15 +18,21 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Set up .NET
-      uses: actions/setup-dotnet@v2
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '7.0.x' # Use the latest .NET version
 
-    - name: Restore dependencies
+    - name: Set up NuGet
+      uses: NuGet/setup-nuget@v1.0.5
+
+    - name: Restore NuGet packages
+      run: nuget restore './Reg Tiktok.sln'
+
+    - name: Restore .NET dependencies
       run: dotnet restore './Reg Tiktok.sln'
 
     - name: Build solution
-      run: dotnet build './Reg Tiktok.sln' --configuration Release
+      run: dotnet build './Reg Tiktok.sln' --configuration Release --no-restore
 
     - name: Run tests
-      run: dotnet test './Reg Tiktok.sln' --configuration Release
+      run: dotnet test './Reg Tiktok.sln' --configuration Release --no-build
